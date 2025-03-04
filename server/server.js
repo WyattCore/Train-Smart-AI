@@ -23,7 +23,7 @@ let input = ""
 
 
 app.post('/api', (req,res) =>{
-    input = req.body.inputa
+    input = req.body.input
     res.json({response: req.body.input})
 })
 
