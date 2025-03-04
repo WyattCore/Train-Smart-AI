@@ -1,4 +1,4 @@
-import Header from './header.jsx';
+import Header from './Header.jsx';
 import Home from './Home.jsx';
 import Plans from './Plans.jsx';
 import About from './About.jsx';
