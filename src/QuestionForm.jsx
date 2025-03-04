@@ -30,7 +30,7 @@ function QuestionForm() {
 
     const format_plan = useCallback(() => {
         console.log("Chat from format : ", chat_response)
-        if(sections === ""){
+        if(sections.length < 1 && chat_response !== "") {
             const temp_sections = chat_response
             .split(/(?:\s?\d\.\s?)/)
             .filter(part => part.trim() !== "");
@@ -62,7 +62,7 @@ function QuestionForm() {
             format_plan();
         }
 
-        if(next && sections !== ""){
+        if(next && sections.length > 0){
             console.log("Sections: ", sections)
             format_sections();
             set_next(false)
