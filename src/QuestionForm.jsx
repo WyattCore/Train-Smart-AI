@@ -8,7 +8,7 @@ function QuestionForm() {
     const [is_loading, set_is_loading] = useState(false);
     const [demographic_answers, setAnswers] = useState({});
     const [case_3_answers, set_case_3_answers] = useState({});
-    // const [backend_data, set_backend_data] = useState([{}]);//
+    const [backend_data, set_backend_data] = useState([{}]);//
     const [input_value, set_input_value] = useState("");
     const [question_list, set_question_list] = useState([]);
     const [temp_response, set_temp_response] = useState("");
@@ -82,7 +82,7 @@ function QuestionForm() {
             ". Come up with a some questions, that will help an ai come up with a workout/nutrition plan for this person. Minimum questions 8, maximum questions 10. Make sure the questions numbered are separated by a '/'. The form has already asked for Gender, Age, Height, Weight, so you don't need to ask that. HAVE EACH QUESTION SEPARATED BY A '/', so I can separate them later. But never put a '/' after the last question.";
 
         try{
-            const response = await fetch("/api", {
+            const response = await fetch("https://train-smart-ai-api.onrender.com/api", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -93,6 +93,7 @@ function QuestionForm() {
             console.log("Response: ", response_in_json);
             await fetch_chat_response();
         } catch (error){
+            
             console.log("Error fetching AI response:", error);
             alert("Error Fetching API Response")
         } finally {
@@ -122,7 +123,7 @@ function QuestionForm() {
                         + final_ai_prompt.current;
 
             try{
-                const response = await fetch("/api", {
+                const response = await fetch("https://train-smart-ai-api.onrender.com/api", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -160,12 +161,13 @@ function QuestionForm() {
 
     const fetch_chat_response = async () => {
         try{
-            fetch("/api").then(
+            fetch("https://train-smart-ai-api.onrender.com/api").then(
             response => response.json()
             ).then(
             data => {
-                // set_backend_data(data);
-                // console.log("Data: ", backend_data);
+                set_backend_data(data);
+                console.log("Data: ", backend_data);
+                console.log("Response: ", data.response);
                 set_chat_response(data.response);
                 }
             )
@@ -211,7 +213,7 @@ function QuestionForm() {
             tips: tips,
         }; 
         try {
-            const response = await axios.post("http://localhost:5000/saved", plan)
+            const response = await axios.post("https://train-smart-ai-api.onrender.com/saved", plan)
             alert(response.data.message);            
         }catch(error){
             console.error("Error saving workout plan: ", error);
