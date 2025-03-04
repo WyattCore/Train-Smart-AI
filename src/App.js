@@ -1,13 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './header.jsx';
+import Home from './Home.jsx';
+import Plans from './Plans.jsx';
+import About from './About.jsx';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import QuestionForm from './QuestionForm.jsx';
+import PLAN_DETAILS from './Plan_details.jsx';
 
-function App() {
+
+function App(){
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Bruh <code>src/App.js</code>.....pimp.
+          Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -21,5 +28,4 @@ function App() {
     </div>
   );
 }
-
-export default App;
+export default App
