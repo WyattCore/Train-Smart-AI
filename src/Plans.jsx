@@ -18,7 +18,7 @@ function Plans(){
 
     const fetch_saved_plans = async() =>{
         try {
-            const response = await axios.get('https://train-smart-ai-api.onrender.com/get');
+            const response = await axios.get('https://train-smart-ai.onrender.com/get');
             set_workout_plans(response.data);
             
         } catch (error) {
