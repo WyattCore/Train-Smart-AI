@@ -213,12 +213,19 @@ function QuestionForm() {
             tips: tips,
         }; 
         try {
-            const response = await axios.post("https://train-smart-ai-api.onrender.com/saved", plan)
-            alert(response.data.message);            
+            const response = await fetch("https://train-smart-ai.onrender.com/api", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({plan: plan}),
+            });
+            const response_in_json =  await response.json()
+            console.log("Response: ", response_in_json);
         }catch(error){
             console.error("Error saving workout plan: ", error);
         }
-        navigate("/plans");
+        // navigate("/plans");
         window.location.reload();
     }
 
