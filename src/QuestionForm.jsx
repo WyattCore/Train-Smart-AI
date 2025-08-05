@@ -82,7 +82,7 @@ function QuestionForm() {
             ". Come up with a some questions, that will help an ai come up with a workout/nutrition plan for this person. Minimum questions 8, maximum questions 10. Make sure the questions numbered are separated by a '/'. The form has already asked for Gender, Age, Height, Weight, so you don't need to ask that. HAVE EACH QUESTION SEPARATED BY A '/', so I can separate them later. But never put a '/' after the last question.";
 
         try{
-            const response = await fetch("https://train-smart-ai-api.onrender.com/api", {
+            const response = await fetch("https://train-smart-ai.onrender.com/api", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -123,7 +123,7 @@ function QuestionForm() {
                         + final_ai_prompt.current;
 
             try{
-                const response = await fetch("https://train-smart-ai-api.onrender.com/api", {
+                const response = await fetch("https://train-smart-ai.onrender.com/api", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -161,7 +161,7 @@ function QuestionForm() {
 
     const fetch_chat_response = async () => {
         try{
-            fetch("https://train-smart-ai-api.onrender.com/api").then(
+            fetch("https://train-smart-ai.onrender.com/api").then(
             response => response.json()
             ).then(
             data => {
