@@ -1,4 +1,5 @@
 Website is live at: https://train-smart-ai.vercel.app/
+Backend code: https://github.com/WyattCore/train-smart-ai-api
 
 This is a side project I wanted to develop to show my familiarity with deploying a website using react, javascript, html, node.js, Express, and css. In this project, I worked with accessing ChatGPT's API to tailor a unique and personal experience for the user.
 
