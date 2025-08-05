@@ -213,7 +213,7 @@ function QuestionForm() {
             tips: tips,
         }; 
         try {
-            const response = await fetch("https://train-smart-ai.onrender.com/api", {
+            const response = await fetch("https://train-smart-ai.onrender.com/saved", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -225,8 +225,8 @@ function QuestionForm() {
         }catch(error){
             console.error("Error saving workout plan: ", error);
         }
-        // navigate("/plans");
-        // window.location.reload();
+        navigate("/plans");
+        window.location.reload();
     }
 
     function WORKOUT_SCHEDULE(){
