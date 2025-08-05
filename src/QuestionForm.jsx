@@ -226,7 +226,7 @@ function QuestionForm() {
             console.error("Error saving workout plan: ", error);
         }
         // navigate("/plans");
-        window.location.reload();
+        // window.location.reload();
     }
 
     function WORKOUT_SCHEDULE(){
