@@ -218,7 +218,7 @@ function QuestionForm() {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({plan: plan}),
+            body: JSON.stringify(plan),
             });
             const response_in_json =  await response.json()
             console.log("Response: ", response_in_json);
