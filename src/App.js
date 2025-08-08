@@ -12,6 +12,10 @@ function App(){
   return (
 
     <>
+    <head>
+      <meta charSet='utf-8'></meta>
+      <title>Train Smart AI</title>
+    </head>
     <Router>
       <Header></Header>
         <Routes>
