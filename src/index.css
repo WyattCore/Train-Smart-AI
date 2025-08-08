@@ -1,5 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family="Roboto":ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+/*//////////////////// Elements//////////////////////////////// */
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
+    color: white;
+}
 
+
+body {
+  font-weight: 200;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+body *{
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+body h2{
+  text-align: center;
+  font: clamp(2rem, 5vh, 5rem) "Roboto", system-ui, Avenir, Helvetica;
+}
+
+body h3{
+  text-align: center;
+  font: clamp(1rem, 3vw, 2.7rem) "Roboto", system-ui, Avenir, Helvetica;
+}
+
+body h4{
+  font: clamp(.7rem, 2.5vh, 1.5rem) "Roboto", system-ui, Avenir, Helvetica;
+}
+
+
+button:hover {
+  background-color: black;
+  color: white; 
+}
 
 a {
   color: #646cff;
@@ -11,58 +56,9 @@ a:hover {
   color: #535bf2;
 }
 
-
-#root {
-  height: 100%;
-  width: 60%;
-  min-width: 800px;
+div{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color:white;
-  color: #464646;
-  color-scheme: light dark;
-  font-family: Inter, system-ui, Avenir, Helvetica;
-}
-
-.about_container{
-  width: 90%;
-}
-
-body {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
- 
-}
-
-body h2{
-  font: clamp(2rem, 5vh, 5rem) Inter, system-ui, Avenir, Helvetica;
-}
-
-body h3{
-  font: clamp(1rem, 3vw, 2.7rem) Inter, system-ui, Avenir, Helvetica;
-}
-
-body h4{
-  font: clamp(.7rem, 2.5vh, 1.5rem) Inter, system-ui, Avenir, Helvetica;
-  
-}
-
-button:hover {
-  background-color: black;
-  color: white;
-}
-
-#click-here h3{
-  text-align: center;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 footer {
@@ -80,24 +76,89 @@ h1 {
 header{
   /* width: clamp(80%, 85%, 90%); */
   display: flex;
-  align-items: ce;
   color: black;
+  margin-bottom: 2rem;
 }
 
 header h2{
-  font-family: "Lora", serif;
   font-weight: 600;
   font-style: normal;
   padding-right: 5px;
-
-  
 }
 
+ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input:focus::placeholder{
+  color: white;
+}
+
+input:focus{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-color: black;
+}
+
+/* ////////////////////////// */
+
+
+#root {
+  height: 100%;
+  width: 60%;
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:white;
+  color: #464646;
+  color-scheme: light dark;
+}
+
+/* ////////////////Navigation bar//////////////// */
+
 .Logo{
- 
   border-right: 1px solid black;
   border-bottom: 1px solid black;
 }
+
+.Logo h2{
+  color: #464646;
+}
+
+.logo:hover{
+  color: black;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navBar a{
+  all: unset;
+  cursor: po"Roboto";
+  border-bottom: 1px solid black;
+  font: clamp(1rem, 2.5vh, 2rem) "Roboto", system-ui, Avenir, Helvetica;
+}
+
+.navElements {
+  margin: 0 2rem;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.navElements:hover{
+  transform: translateY(-5px);
+}
+
+/* //////////////////// Home page/////////////////// */
+
 
 .home-intro{
   width: 100%;
@@ -125,7 +186,7 @@ header h2{
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 16px;
-  cursor: pointer; 
+  cursor: po"Roboto"; 
   transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -168,15 +229,13 @@ header h2{
 
 }
 
-#included{
-  width: 100%;
-  display: flex;
-  display: row;
+.home-section{
   border: 1px solid black;
-  border-radius: 4%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  justify-content: center;
-  align-items: center;
+  border-radius: 15px;
+  flex-direction: row;
+  padding: 1rem;
+  margin: 2rem 0;
+  box-shadow: 0 5px 10px grey;
 }
 
 #included-header{
@@ -202,7 +261,7 @@ header h2{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  font: clamp(1rem, 3vh, 2.2rem) Inter, system-ui, Avenir, Helvetica;
+  font: clamp(1rem, 3vh, 2.2rem) "Roboto", system-ui, Avenir, Helvetica;
   padding-top: 3%;
   padding-bottom: 3%;
   border-left: 1px solid black;
@@ -217,146 +276,7 @@ header h2{
 
 
 
-.loader {
-  animation: rotate 1s infinite;
-  height: 50px;
-  width: 50px;
-}
 
-.loader:before,
-.loader:after {
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 20px;
-  width: 20px;
-}
-.loader:before {
-  animation: ball1 1s infinite;
-  background-color: #fff;
-  box-shadow: 30px 0 0 #ff3d00;
-  margin-bottom: 10px;
-}
-.loader:after {
-  animation: ball2 1s infinite;
-  background-color: #ff3d00;
-  box-shadow: 30px 0 0 #fff;
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg) scale(0.8) }
-  50% { transform: rotate(360deg) scale(1.2) }
-  100% { transform: rotate(720deg) scale(0.8) }
-}
-
-@keyframes ball1 {
-  0% {
-    box-shadow: 30px 0 0 #ff3d00;
-  }
-  50% {
-    box-shadow: 0 0 0 #ff3d00;
-    margin-bottom: 0;
-    transform: translate(15px, 15px);
-  }
-  100% {
-    box-shadow: 30px 0 0 #ff3d00;
-    margin-bottom: 10px;
-  }
-}
-
-@keyframes ball2 {
-  0% {
-    box-shadow: 30px 0 0 #fff;
-  }
-  50% {
-    box-shadow: 0 0 0 #fff;
-    margin-top: -20px;
-    transform: translate(15px, 15px);
-  }
-  100% {
-    box-shadow: 30px 0 0 #fff;
-    margin-top: 0;
-  }
-}
-
-
-.navBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-
-}
-
-.navBar a{
-  all: unset;
-  cursor: pointer;
-  border-bottom: 1px solid black;
-  font: clamp(1rem, 2.5vh, 2rem) Inter, system-ui, Avenir, Helvetica;
-}
-
-.navElements {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.plan-format A{
-  all: unset;
-  cursor: pointer;
-}
-
-.plan-format li:hover{
-  transform: scale(1.05);
-}
-
-.plan_parts_nutrition{
-  display: flex;
-  max-width: 300px;
-  align-items: center;
-  flex-direction: column;
-  border: 1.5px solid black;
-  border-radius: .5rem;
-  margin: 1rem;
-  margin-top: 0rem;
-}
-
-.plan_parts_nutrition ul{
-  padding-left: 0;
-  flex-direction: column;
-}
-
-.plan_parts_nutrition h2{
-  justify-content: center;
-}
-
-.plan_parts_nutrition li{
-  padding-bottom: .5rem;
-}
-
-.plan_parts_workout{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border: 1.5px solid black;
-  border-radius: .5rem;
-  margin: 1rem;
-  margin-top: 0rem;
-}
-
-.plan_parts_workout ul{
-  padding-left: 0;
-  flex-direction: column;
-}
-
-.plan_parts_workout h3{
-  justify-content: center;
-  margin-bottom: 0;
-}
-
-/* .plan_parts_workout li{
-  
-} */
 
 .prompt_input_box {
   background-color: white;
@@ -366,8 +286,14 @@ header h2{
   margin-bottom: 1rem;
   margin-right: 1rem;
   padding: 5px;
-  width: 30rem;
+  width: 90%;
 }
+
+.prompt_input_box:focus{
+  color: white;
+  background-color: black;
+}
+
 
 
 .prompt_submit_button {
@@ -376,38 +302,50 @@ header h2{
   border-radius: 5px;
 }
 
-/* .prompt_questions{
-
-} */
+/*/////////////////////////// Demographic form///////////////////////// */
 
 .Questionare{
   display: flex;
-  margin-top: 4%;
-  flex-direction: column;
-  width: 70%;
-  max-width: 900px;
-  max-height: 3000px;
-  background-color: white;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  border-radius: 10px;
+  align-items: start;
+  margin-bottom: 2rem;
   border: 1px solid black;
+  width: 70%;
+  flex-direction: column;
+  max-width: 900px;
+  height: auto;
+  background-color: white;
+  padding: 0 .5rem;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 5%;
+}
 
+.Questionare-header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Questionare div{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 0 5%;
 }
 
 .Questionare h3{
+  text-align: start;
   font-size: clamp(1rem,3vh,2rem);
 }
 
 .Questionare-button{
+  margin: 0;
+  align-items: center;
   width: 100%;
-  display: flex;
-  justify-content: end;
 }
 
-.Questionare button{
+.Questionare-button button{
   width: 18%;
   background-color: black;
   color: white;
@@ -415,20 +353,19 @@ header h2{
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 16px;
-  cursor: pointer; 
+  cursor: po"Roboto"; 
   transition: background-color 0.3s, transform 0.2s;
   margin-bottom: 2%;
-
 }
 
 
-.Questionare button:hover{
+.Questionare-button button:hover{
   background-color: #333;
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.Questionare button:focus{
+.Questionare-button button:focus{
   outline: 2px solid #555;
 }
 
@@ -445,20 +382,17 @@ header h2{
   border: 1px black solid;
 }
 
-.Questionare input:focus{
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-}
-
-.Questionare-header{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .Questionare h2{
   padding-bottom: 1%;
   border-bottom: 1.5px solid black ;
+}
+
+#btn-div{
+  display: flex;
+  width: 85%;
+  justify-content: start;
+  align-items: center;
+  margin: 1rem;
 }
 
 .response_box {
@@ -475,14 +409,24 @@ header h2{
   width: 100%;
 }
 
+/* Detail your plan questionare */
+
+
 .looks-good{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
   width: 80%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 2rem;
 }
+
 
 .looks-good h3{
   text-align: center;
+  margin: 0;
 }
 
 .user_prompts {
@@ -490,9 +434,11 @@ header h2{
   width: 80%;
   flex-direction: row;
   justify-content: center;
+  margin: 1rem;
 }
 
 .user_prompts form{
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -505,12 +451,13 @@ header h2{
   max-height: 50%;
 }
 
-/* .user_prompts */
+
 
 .user_prompt_buttons{
   width: 100%;
   display: flex;
-  justify-content: end;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .user_prompts input:focus{
@@ -527,7 +474,7 @@ header h2{
   padding: 2px 5px;
   margin-left: 2%;
   font-size: 13px;
-  cursor: pointer; 
+  cursor: po"Roboto"; 
   transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -536,12 +483,12 @@ header h2{
   flex-direction: column;
   background-color: white;
   color: black;
-  width: 90;
+  width: 90%;
   justify-content: center;
   align-items: center;
   margin-bottom: 4%;
-  
 }
+
 
 .Workout-plan-header{
   display: flex;
@@ -550,23 +497,63 @@ header h2{
   align-items: center;
   border: 1.5px solid black;
   border-radius: .5rem;
-  margin: 1rem;
-  padding: .5rem;
   width: 90%;
+  margin: 1rem 0;
 }
 
 .Workout-plan-instruct{
+  width: 90%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+.plan-format A{
+  all: unset;
+  cursor: po"Roboto";
+}
+
+.plan-format li:hover{
+  transform: scale(1.05);
+}
+
+
+.plan_parts{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 .5rem;
+}
+
+.plan_parts ul{
+  padding-left: 0;
+  text-align: start;
+  list-style-type: none;
+}
+
+.plan_parts h2{
   justify-content: center;
-  padding-left: .5rem;
-  padding-right: .5rem;
+}
+
+.plan_parts li{
+  padding-bottom: .5rem;
+}
+
+.plan_parts ul{
+  padding-left: 0;
+  flex-direction: column;
+}
+
+.plan_parts h3{
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .instructions{
   width: 45%;
-  padding-left: .5rem;
-  padding-right: .5rem;
 }
 
 .Workout-plan-close{
@@ -577,6 +564,7 @@ header h2{
   border-radius: .5rem;
   border: 1.5px solid black;
   padding-left: .5rem;
+  margin: 1rem 0;
 }
 
 .wrapper {
@@ -586,7 +574,30 @@ header h2{
   min-height: 100vh;
 }
 
-ul {
+
+/* Saved page */
+
+.saved_plans_container{
+  margin: 2rem;
+  align-items: center;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding:1rem;
   list-style: none;
-  text-align: center;
+}
+
+.saved_plans_container ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.saved_plans_container li{
+  margin: .5rem 0;
+}
+
+/* /////////////////About Page//////////////// */
+
+.about_container{
+  width: 90%;
 }

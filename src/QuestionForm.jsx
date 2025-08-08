@@ -236,7 +236,7 @@ function QuestionForm() {
         const [...workout] = workouts;
 
         return (
-            <div className="plan_parts_workout">
+            <div className="plan_parts">
                 <h3>{"Workout Plan"}</h3>
                 <ul>
                     {workout.map((workout, index) => (
@@ -255,7 +255,7 @@ function QuestionForm() {
         const[header, ...nutr] = nutrition;
         console.log(header);
         return (
-            <div className="plan_parts_nutrition">
+            <div className="plan_parts">
                 <h3>{"Nutrition Plan"}</h3>
                 <ul>
                     {nutr.map((nut, index) => (
@@ -320,25 +320,27 @@ function QuestionForm() {
             return(
                 <>
                 <div className="looks-good">
-                    <h3 className="prompt_questions">That all looks good! In a sentence or 2 below, detail your main fitness goal.</h3>
-                </div>
-                <div className='user_prompts'>
-                    <form onSubmit={(e) => handle_ai_submit(e, 2)}>
-                    <textarea
-                        className='prompt_input_box'
-                        type='text'
-                        value={input_value}
-                        onChange={handle_change}
-                        placeholder='Enter prompt'
-                    >
-                    </textarea> 
-                    {!is_loading ? 
-                    <div className="user_prompt_buttons">
-                        <button className="prompt_submit_button" type="button" onClick={prevStep}>Previous</button>
-                        <button className='prompt_submit_button' type='submit'>Submit</button>
-                    </div> : <span className="loading"></span>}
+                        <h3 className="prompt_questions">Looks good!</h3>
+                        <h3 className="prompt_questions">Detail your main fitness goal.</h3>
+                    
+                    <div className='user_prompts'>
+                        <form onSubmit={(e) => handle_ai_submit(e, 2)}>
+                        <textarea
+                            className='prompt_input_box'
+                            type='text'
+                            value={input_value}
+                            onChange={handle_change}
+                            placeholder='Enter prompt'
+                        >
+                        </textarea> 
+                        {!is_loading ? 
+                        <div className="user_prompt_buttons">
+                            <button className="prompt_submit_button" type="button" onClick={prevStep}>Previous</button>
+                            <button className='prompt_submit_button' type='submit'>Submit</button>
+                        </div> : <span className="loading"></span>}
 
-                    </form>
+                        </form>
+                    </div>
                 </div>
                 </>
             );
@@ -361,8 +363,10 @@ function QuestionForm() {
                             onChange={handle_case3_input_change} />
                         </div>
                         )
-                    })}
-                    <button className="prompt_submit_button" onClick={handle_case3_submit}>Next</button>
+                    })}"
+                        <div id="btn-div">
+                            <button className="prompt_submit_button" onClick={handle_case3_submit}>Next</button>
+                        </div>
                     </div>
                 )}
                 </>

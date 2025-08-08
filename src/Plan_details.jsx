@@ -18,7 +18,7 @@ function Plan_Details(){
         const [...schedule] = workout_plan.workouts;
 
         return (
-            <div className="plan_parts_workout">
+            <div className="plan_parts">
                 <h3>{"Workout Plan"}</h3>
                 <ul>
                     {schedule.map((workout, index) => (
@@ -35,7 +35,7 @@ function Plan_Details(){
         console.log(header);
 
         return (
-            <div className="plan_parts_nutrition">
+            <div className="plan_parts">
                 <h3>{"Nutrition Plans"}</h3>
                 <ul>
                     {nutrition.map((nut, index) => (

@@ -18,17 +18,17 @@ function Home(){
                 <h2>Transform your fitness journey with personalized AI-driven workout plans!</h2>
             </div>
 
-            <div id="home_pic">
+            <div className="home-section">
                 <img src={robot_pic} alt="Robot lifting weight" />
                 <div id="words">
                     <h4>With Train Smart AI you have all the information you need to reach your fitness goals at your fingretips.</h4>
                     <h4>Answer easy questions personalized to you to get your own fitness plan within minutes!</h4>
-                    <h4>You now have the ability to save and have access to each plan generated.</h4>
+                    <h4>You now have the ability to save and  access to each generated plan.</h4>
                 </div>
                 
             </div>
             
-            <div id="included">
+            <div className="home-section">
                 <div id="included-header">
                 <h3>Included in every plan:</h3>
                 </div>

@@ -5,7 +5,9 @@ function Header(){
     return(
         <header>
             <div className="Logo">
-            <h2>Train Smart AI</h2>
+            <Link to="/">
+                <h2 className="logo">Train Smart AI</h2>
+            </Link>
             </div>
             
             <nav className="navBar">
